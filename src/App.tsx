@@ -60,7 +60,8 @@ function App() {
             </header>
             <p className="featured-description">
               A trivia game that asks a simple question: is this bird real or fake?
-              Answer correctly to build streaks, earn badges, unlock themes, and expand your field guide.
+              Answer correctly to build streaks, earn badges, unlock themes, and expand your field guide. 
+              Or challenge friends to see who's the top real fake birder!
             </p>
             <ul className="feature-list" aria-label="Real Fake Birds features">
               <li className="feature-pill">Daily Challenges</li>
