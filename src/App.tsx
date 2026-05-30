@@ -1,122 +1,107 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="site">
+      <header className="site-header">
+        <a href="/" className="logo-link" aria-label="Catbird Games — home">
+          <img
+            src="/images/catbird_games_logo.png"
+            alt="Catbird Games"
+            className="site-logo"
+          />
+        </a>
+      </header>
 
-      <div className="ticks"></div>
+      <main>
+        <section className="hero" aria-labelledby="hero-heading">
+          <div className="hero-content">
+            <p className="hero-eyebrow">Indie Game Studio</p>
+            <h1 id="hero-heading" className="hero-title">
+              Small games.<br />Big fun.
+            </h1>
+            <p className="hero-body">
+              Catbird Games makes games that are playful, sharp, and just a little hard to put down.
+            </p>
+            <a
+              href="https://www.realfakebirds.app"
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Play Real Fake Birds
+            </a>
+          </div>
+          <div className="hero-feathers" aria-hidden="true">
+            <img src="/images/badges/flight_feather.png" alt="" className="feather feather-1" />
+            <img src="/images/badges/gold_feather.png" alt="" className="feather feather-2" />
+            <img src="/images/badges/wing_feather.png" alt="" className="feather feather-3" />
+            <img src="/images/badges/silver_feather.png" alt="" className="feather feather-4" />
+          </div>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div className="section-rule" aria-hidden="true">
+          <span className="section-rule-line" />
+          <img src="/images/badges/plume.png" alt="" className="section-rule-icon" />
+          <span className="section-rule-line" />
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        <section className="featured" aria-labelledby="featured-heading">
+          <div className="featured-inner">
+            <div className="featured-motif" aria-hidden="true">
+              <img src="/images/badges/aurora_feather.png" alt="" className="motif-feather motif-1" />
+              <img src="/images/badges/gold_feather.png" alt="" className="motif-feather motif-2" />
+              <img src="/images/badges/contour_feather.png" alt="" className="motif-feather motif-3" />
+            </div>
+            <header className="featured-header">
+              <span className="featured-label">Now Playing</span>
+              <h2 id="featured-heading" className="featured-title">Real Fake Birds</h2>
+              <p className="featured-tagline">Some are real. Some are fake. Tell them apart.</p>
+            </header>
+            <p className="featured-description">
+              A trivia game that asks a simple question: is this bird real or fake?
+              Answer correctly to build streaks, earn badges, unlock themes, and expand your field guide. 
+              Or challenge friends to see who's the top real fake birder!
+            </p>
+            <ul className="feature-list" aria-label="Real Fake Birds features">
+              <li className="feature-pill">Daily Challenges</li>
+              <li className="feature-pill">Streak Tracking</li>
+              <li className="feature-pill">Feather Badges</li>
+              <li className="feature-pill">Bird Journal</li>
+              <li className="feature-pill">Leaderboard</li>
+              <li className="feature-pill">Collectible Themes</li>
+            </ul>
+            <a
+              href="https://www.realfakebirds.app"
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Play Now →
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="site-footer-inner">
+          <p className="footer-copy">© 2026 Catbird Games, LLC. All rights reserved.</p>
+          <nav className="footer-nav" aria-label="Footer links">
+            <a href="mailto:campbell.ryan.r@gmail.com" className="footer-link">Contact</a>
+            <a
+              href="https://www.realfakebirds.app"
+              className="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Real Fake Birds
+            </a>
+          </nav>
+        </div>
+      </footer>
+    </div>
   )
 }
 
 export default App
+
